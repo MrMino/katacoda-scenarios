@@ -1,29 +1,49 @@
 {
-  "title": "Ansible: Basic Concepts",
+  "title": "Ansible: set up an HTTP server from scratch",
   "description": "Learn basic of using Ansible.",
   "difficulty": "Beginner",
   "time": "60 minutes",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
-        "text": "step1.md"
+        "title": "Environment setup",
+        "text": "environment-setup.md"
       },
       {
-        "title": "Step 2",
-        "text": "step2.md"
+        "title": "Set up playground",
+        "text": "playground.md"
       },
       {
-        "title": "Step 3",
-        "text": "step3.md"
+        "title": "Basic Ansible commands",
+        "text": "basic-commands.md"
       },
       {
-        "title": "Step 4",
-        "text": "step4.md"
+        "title": "Ansible inventory",
+        "text": "ansible-inventory.md"
       },
       {
-        "title": "Step 5",
-        "text": "step5.md"
+        "title": "Ansible modules: ping all your machines",
+        "text": "ansible-modules.md"
+      },
+      {
+        "title": "Create a basic Ansible playbook",
+        "text": "basic-play.md"
+      },
+      {
+        "title": "Install packages using Ansible",
+        "text": "install-packages-play.md"
+      },
+      {
+        "title": "Copy files using Ansible",
+        "text": "copy-files-play.md"
+      },
+      {
+        "title": "Using \"when\"",
+        "text": "using-when.md"
+      },
+      {
+        "title": "Set up Nginx using Ansible",
+        "text": "setup-nginx.md"
       }
     ],
     "intro": {
