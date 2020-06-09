@@ -110,4 +110,32 @@ Right now, you have an Ubuntu terminal opened.
 
     You should see "I'm alive!" in the output.
 
+
+<details>
+<summary>For convenience, here's the complete script</summary>
+<p>
+```
+# terminal 1
+sudo apt update
+sudo apt install ansible
+
+ssh-keygen -t rsa -b 4096 -f ./id_rsa -C "root@ansible-node" -P ""
+
+docker build --tag ansible-node .
+docker run -p 12345:12345 -p 80:80 -it ansible-node
+```
+</p>
+<hr/>
+<p>
+```
+# terminal 1
+eval $(ssh-agent)
+ssh-add id_rsa
+ssh root@localhost -p 12345 -C "echo I\'m alive\!"
+```
+
+</p>
+</details>
+</p></summary></details>
+
 ### Now, we're ready to go!
