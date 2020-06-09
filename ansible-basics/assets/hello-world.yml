@@ -1,0 +1,7 @@
+---
+
+- name: Hello world
+  hosts: production
+  tasks:
+    - name: Echo-out the message on the remote
+      shell: echo "Hello world!"

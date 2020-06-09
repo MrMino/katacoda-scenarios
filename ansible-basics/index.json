@@ -53,6 +53,10 @@
           {
               "file": "inventory.ini",
               "target": "/root"
+          },
+          {
+              "file": "hello-world.yml",
+              "target": "/root"
           }
       ]
     }
