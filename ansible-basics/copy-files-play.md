@@ -37,7 +37,7 @@ Add the following to the playbook:
 ```
       - name: Sync www
         git:
-            repo: https://github.com/mdn/beginner-html-site-styled.git
+            repo: https://github.com/cloudacademy/static-website-example
             dest: "/var/www/html/"
 ```
 
@@ -60,8 +60,8 @@ We have 2 problems in our playbook right now:
    We need to remove it after installation of Nginx, because git won't sync
    into existing, non-git directory, but we shouldn't do it every time we run
    the playbook. A better solution would be to run it only if we actually
-   installed Nginx. *Run the playbook again to see the removal step do it's
-   thing again.*
+   installed Nginx. **Run the playbook again to see the removal step do it's
+   thing again.**
 
 *Note on #2: Well... it would actually be even better to do an error recovery
 if git sync fails, that removes the directory as a recovery step, but it's out
@@ -96,7 +96,7 @@ That's it! We've now moved the path to our webpage files into a variable.
 
 *Note for the curious kind: Ansible uses Jinja2 templating for variables. These
 have a looooot of additional functionality. See
-[docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#transforming-variables-with-jinja2-filters)*
+[docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#transforming-variables-with-jinja2-filters).*
 
 # The "when" statement
 
@@ -123,7 +123,7 @@ Add the following to Nginx reinstallation step:
 Now, add the following `when` statement to "Remove default www" task:
 
 ```
-        when: nginx_installed is changed
+        when: nginx_installed.changed
 ```
 
 This tells Ansible to run this task *only* if the task that installed Nginx
@@ -139,7 +139,41 @@ ssh root@localhost -p 12345 -C 'apt remove nginx'
 
 Run the playbook again. The removal step should run this time.
 
+<details>
+<summary>
+For convenience, this is how the finished playbook should look like.
+</summary>
+<p>
+```
+---
 
+- name: Setup HTTP server
+  hosts: production
+  vars:
+        www_path: "/var/www/html/"
+  tasks:
+      - name: Update apt cache and install Nginx
+        apt: name=nginx state=present update-cache=true
+        register: nginx_installed
+      - name: Update apt cache and install Git
+        apt: name=git state=present update-cache=true
+      - name: Start Nginx
+        service:
+            name: nginx
+            state: started
+      - name: Remove default www
+        file:
+            path: "{{www_path}}"
+            state: absent
+        when: nginx_installed is changed
+      - name: Sync www
+        git:
+            repo: https://github.com/cloudacademy/static-website-example
+            dest: "{{www_path}}"
+```
+
+</p>
+</details>
 
 ---
 

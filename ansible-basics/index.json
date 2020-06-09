@@ -32,10 +32,6 @@
       {
         "title": "Copy files using Ansible",
         "text": "copy-files-play.md"
-      },
-      {
-        "title": "Set up Nginx using Ansible",
-        "text": "setup-nginx.md"
       }
     ],
     "intro": {
