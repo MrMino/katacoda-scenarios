@@ -53,6 +53,10 @@
           {
               "file": "Dockerfile",
               "target": "/root"
+          },
+          {
+              "file": "inventory.ini",
+              "target": "/root"
           }
       ]
     }
