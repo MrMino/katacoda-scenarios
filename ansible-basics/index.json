@@ -34,10 +34,6 @@
         "text": "copy-files-play.md"
       },
       {
-        "title": "Using \"when\"",
-        "text": "using-when.md"
-      },
-      {
         "title": "Set up Nginx using Ansible",
         "text": "setup-nginx.md"
       }
