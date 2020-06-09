@@ -10,10 +10,6 @@
         "text": "environment-setup.md"
       },
       {
-        "title": "Set up playground",
-        "text": "playground.md"
-      },
-      {
         "title": "Basic Ansible commands",
         "text": "basic-commands.md"
       },
