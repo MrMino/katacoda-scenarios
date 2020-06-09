@@ -10,7 +10,7 @@ You can read up about different inventory formats [here](https://docs.ansible.co
 
 In the editor, open the file `inventory.ini`.
 
- * `[example-group]` - this line specifies a **group**. Groups are a way of
+ * `[example_group]` - this line specifies a **group**. Groups are a way of
    putting hosts together. This way, you can run your automation at many of
    them at once.
 
@@ -40,7 +40,7 @@ Let's check how the inventory works, by issuing a few Ansible commands:
 
 ```
 ansible -i inventory.ini -m ping all
-ansible -i inventory.ini -m ping example-group
+ansible -i inventory.ini -m ping example_group
 ansible -i inventory.ini -m ping my-alias
 ```
 
@@ -71,7 +71,7 @@ ansible -i inventory.ini -m setup webapp
 <summary>Click here, to see how your inventory should look like now.</summary>
 <p>
 ```
-[example-group]
+[example_group]
 this.is.my.host.com
 my-alias ansible_host=some.host.com ansible_port=123
 
