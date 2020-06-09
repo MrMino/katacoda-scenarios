@@ -55,7 +55,7 @@
               "target": "/root"
           },
           {
-              "file": "hello-world.yml",
+              "file": "my-playbook.yml",
               "target": "/root"
           }
       ]

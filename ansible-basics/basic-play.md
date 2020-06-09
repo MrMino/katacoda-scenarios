@@ -1,6 +1,6 @@
 # The fun starts here
 
-In the editor, open file `hellow-world.yml`.
+In the editor, open file `my-playbook.yml`.
 
 This is a basic Ansible **playbook**. A playbook is a list of **plays** that
 run on a set of hosts.
@@ -42,7 +42,7 @@ about
 To execute a playbook, use `ansible-playbook`:
 
 ```
-ansible-playbook -i inventory.ini hello-world.yml
+ansible-playbook -i inventory.ini my-playbook.yml
 ```
 
 # Where's my output?
