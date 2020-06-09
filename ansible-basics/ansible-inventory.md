@@ -30,8 +30,8 @@ In the editor, open the file `inventory.ini`.
    They specify the address for SSH connection, which Ansible will use.
 
    By using a host alias, you supply a different name for your host, which you
-   can then use as an argument to `ansible` command (e.g. `ansible -i
-   'inventory.ini' -m ping my-alias`).
+   can then use as an argument to `ansible` command (e.g.
+   `ansible -i inventory.ini -m ping my-alias`).
 
    If you use an alias, you also have to use `ansible_host` parameter.
 
@@ -59,7 +59,7 @@ Add the following to `inventory.ini`:
 webapp ansible_host=127.0.0.1 ansible_port=12345 ansible_user=root
 ```
 
-Let's use another module,
+Now, let's use another module:
 [`setup`](https://docs.ansible.com/ansible/latest/modules/setup_module.html),
 to see some basic information about our playground.
 
