@@ -12,7 +12,7 @@
     ansible all -m ping -i "localhost:12345,"
     ```
 
-    * `all` - a *pattern* argument for the inventory, which we'll create in the
+    * `all` - a [**pattern**](https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html) argument for the inventory, which we'll create in the
     next step. `all` means "do for every host in the inventory".
     * `-m ping` - Ansible module to use
     * `-i "localhost:12345,"` - inventory host list
