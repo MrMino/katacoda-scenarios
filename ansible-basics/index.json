@@ -26,6 +26,10 @@
         "text": "install-packages-play.md"
       },
       {
+        "title": "Configure services using Ansible",
+        "text": "services-play.md"
+      },
+      {
         "title": "Copy files using Ansible",
         "text": "copy-files-play.md"
       },
