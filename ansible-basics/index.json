@@ -18,10 +18,6 @@
         "text": "ansible-inventory.md"
       },
       {
-        "title": "Ansible modules: ping all your machines",
-        "text": "ansible-modules.md"
-      },
-      {
         "title": "Create a basic Ansible playbook",
         "text": "basic-play.md"
       },
