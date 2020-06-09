@@ -10,7 +10,6 @@ resources to explore on your own.
 List of covered topics:
  * Setting up environment for Ansible
  * Setting up a docker playground where you can test things on your own
- * Infrastracture as Code philosophy
  * Basics of how Ansible works
  * Inventory, modules, playbooks, plays
  * Setting up a small static webpage using Ansible & Nginx
